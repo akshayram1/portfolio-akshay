@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshay Chame | HyperFrames Portfolio</title>
+    <meta
+      name="description"
+      content="A cinematic AI/ML portfolio for Akshay Chame, built with HyperFrames."
+    />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@hyperframes/player"></script>
+    <style>
+      :root {
+        --bg: #06101b;
+        --panel: rgba(8, 17, 29, 0.76);
+        --panel-border: rgba(237, 243, 251, 0.12);
+        --text: #edf3fb;
+        --muted: rgba(237, 243, 251, 0.74);
+        --cyan: #65e7ff;
+        --lime: #d4ff3f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 16% 18%, rgba(101, 231, 255, 0.18), transparent 22%),
+          radial-gradient(circle at 84% 12%, rgba(212, 255, 63, 0.14), transparent 20%),
+          linear-gradient(140deg, #06101b 0%, #0a1625 52%, #11253b 100%);
+      }
+
+      .page {
+        width: min(1240px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 36px 0 56px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 24px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .hero-copy,
+      .info-card {
+        border: 1px solid var(--panel-border);
+        background: var(--panel);
+        backdrop-filter: blur(12px);
+      }
+
+      .hero-copy {
+        padding: 28px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 12px;
+        border: 1px solid rgba(101, 231, 255, 0.24);
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+      }
+
+      .sub {
+        margin: 16px 0 0;
+        max-width: 54ch;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .info-card {
+        padding: 24px;
+      }
+
+      .info-card h2 {
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--lime);
+      }
+
+      .info-card p,
+      .info-card li {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .player-shell {
+        border: 1px solid var(--panel-border);
+        background: rgba(3, 8, 14, 0.92);
+        padding: 16px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      }
+
+      hyperframes-player {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        display: block;
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .meta-card {
+        border: 1px solid var(--panel-border);
+        background: var(--panel);
+        padding: 18px;
+      }
+
+      .meta-card h3 {
+        margin: 0 0 10px;
+        font-size: 0.95rem;
+        color: var(--cyan);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .meta-card p,
+      .meta-card a {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .meta-card a {
+        color: var(--text);
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .meta-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .page {
+          width: min(100vw - 20px, 1240px);
+          padding-top: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">HyperFrames Portfolio</div>
+          <h1>Akshay Chame</h1>
+          <p class="sub">
+            AI/ML engineer building production-grade GenAI systems, agentic applications, RAG platforms,
+            and cloud-native AI workflows. This site plays the original HyperFrames portfolio composition
+            directly in the browser.
+          </p>
+        </div>
+        <aside class="info-card">
+          <h2>Built With</h2>
+          <ul>
+            <li>HyperFrames composition source</li>
+            <li>GSAP animation timelines</li>
+            <li>HTML, CSS, and vanilla JavaScript</li>
+            <li>@hyperframes/player for static web playback</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="player-shell">
+        <hyperframes-player src="./portfolio/index.html" controls></hyperframes-player>
+      </section>
+
+      <section class="meta-grid">
+        <article class="meta-card">
+          <h3>Highlights</h3>
+          <p>20+ AI POCs, 25% productivity improvement, 10% latency reduction, 4 IEEE papers, SIH 2023 winner.</p>
+        </article>
+        <article class="meta-card">
+          <h3>Repository</h3>
+          <p><a href="https://github.com/akshayram1/portfolio-akshay">github.com/akshayram1/portfolio-akshay</a></p>
+        </article>
+        <article class="meta-card">
+          <h3>Contact</h3>
+          <p><a href="mailto:akshaychame2@gmail.com">akshaychame2@gmail.com</a><br />linkedin.com/in/akshaychame</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
