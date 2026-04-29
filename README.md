@@ -119,4 +119,4 @@ If you want this portfolio live on GitHub Pages, the next step is to add:
 ## Repository
 
 GitHub repository:
-- [akshayram1/portfolio-akshay](https://github.com/akshayram1/portfolio-akshay)
+- [akshayram1/portfolio-akshay](https://github.com/akshayram1/hyperframe_portfolio)
