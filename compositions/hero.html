@@ -1,0 +1,237 @@
+<template id="hero-scene-template">
+  <div
+    data-composition-id="hero-scene"
+    data-start="0"
+    data-duration="4.3"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div class="hero-backdrop">
+      <div class="hero-orbit orbit-a"></div>
+      <div class="hero-orbit orbit-b"></div>
+      <div class="signal-node node-a"></div>
+      <div class="signal-node node-b"></div>
+      <div class="signal-node node-c"></div>
+    </div>
+    <div class="scene-content hero-layout">
+      <div class="hero-left">
+        <div class="eyebrow">AI / ML engineer</div>
+        <h1 class="hero-name">
+          <span>AKSHAY</span>
+          <span>CHAME</span>
+        </h1>
+        <p class="hero-summary">
+          Production-grade GenAI systems, agentic applications, RAG platforms, and cloud-native AI workflows.
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="summary-card">
+          <div class="summary-label">Current focus</div>
+          <div class="summary-copy">
+            Building MCP servers and enterprise AI capabilities for data workflow automation.
+          </div>
+          <div class="summary-meta">Pune, India / Remote-ready</div>
+        </div>
+      </div>
+      <div class="proof-rail">
+        <div class="proof-chip">20+ enterprise AI POCs</div>
+        <div class="proof-chip">4 IEEE papers</div>
+        <div class="proof-chip">SIH 2023 winner</div>
+      </div>
+    </div>
+    <style>
+      [data-composition-id="hero-scene"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: #edf3fb;
+      }
+
+      [data-composition-id="hero-scene"] .scene-content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        padding: 130px 140px 110px;
+        gap: 32px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="hero-scene"] .hero-layout {
+        align-content: space-between;
+      }
+
+      [data-composition-id="hero-scene"] .hero-backdrop {
+        position: absolute;
+        inset: 0;
+      }
+
+      [data-composition-id="hero-scene"] .hero-orbit {
+        position: absolute;
+        border: 1px solid rgba(101, 231, 255, 0.16);
+        border-radius: 999px;
+      }
+
+      [data-composition-id="hero-scene"] .orbit-a {
+        width: 540px;
+        height: 540px;
+        left: 72px;
+        top: 140px;
+      }
+
+      [data-composition-id="hero-scene"] .orbit-b {
+        width: 760px;
+        height: 760px;
+        right: -140px;
+        top: 40px;
+        border-color: rgba(212, 255, 63, 0.12);
+      }
+
+      [data-composition-id="hero-scene"] .signal-node {
+        position: absolute;
+        border-radius: 999px;
+        background: #65e7ff;
+        box-shadow: 0 0 24px rgba(101, 231, 255, 0.75);
+      }
+
+      [data-composition-id="hero-scene"] .node-a {
+        width: 18px;
+        height: 18px;
+        left: 244px;
+        top: 238px;
+      }
+
+      [data-composition-id="hero-scene"] .node-b {
+        width: 12px;
+        height: 12px;
+        left: 486px;
+        top: 504px;
+      }
+
+      [data-composition-id="hero-scene"] .node-c {
+        width: 14px;
+        height: 14px;
+        right: 356px;
+        top: 220px;
+        background: #d4ff3f;
+        box-shadow: 0 0 24px rgba(212, 255, 63, 0.7);
+      }
+
+      [data-composition-id="hero-scene"] .hero-left {
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      [data-composition-id="hero-scene"] .hero-right {
+        width: 648px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-top: 26px;
+      }
+
+      [data-composition-id="hero-scene"] .eyebrow,
+      [data-composition-id="hero-scene"] .summary-label,
+      [data-composition-id="hero-scene"] .summary-meta,
+      [data-composition-id="hero-scene"] .proof-chip {
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      [data-composition-id="hero-scene"] .eyebrow {
+        width: fit-content;
+        padding: 10px 16px;
+        border: 1px solid rgba(101, 231, 255, 0.24);
+        background: rgba(6, 16, 27, 0.48);
+        color: #65e7ff;
+        font-size: 18px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      [data-composition-id="hero-scene"] .hero-name {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: fit-content;
+        padding: 12px 80px 16px 0;
+        font-size: 142px;
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+        color: #ffffff;
+        background: linear-gradient(90deg, rgba(6, 16, 27, 0.82), rgba(6, 16, 27, 0));
+        text-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+      }
+
+      [data-composition-id="hero-scene"] .hero-summary {
+        max-width: 760px;
+        font-size: 34px;
+        line-height: 1.24;
+        color: rgba(237, 243, 251, 0.86);
+      }
+
+      [data-composition-id="hero-scene"] .summary-card {
+        width: 100%;
+        padding: 28px;
+        border: 1px solid rgba(237, 243, 251, 0.12);
+        background: linear-gradient(180deg, rgba(16, 34, 54, 0.82), rgba(8, 17, 29, 0.64));
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+      }
+
+      [data-composition-id="hero-scene"] .summary-label {
+        margin-bottom: 16px;
+        font-size: 15px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #d4ff3f;
+      }
+
+      [data-composition-id="hero-scene"] .summary-copy {
+        font-size: 28px;
+        line-height: 1.34;
+      }
+
+      [data-composition-id="hero-scene"] .summary-meta {
+        margin-top: 20px;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        color: rgba(237, 243, 251, 0.72);
+        text-transform: uppercase;
+      }
+
+      [data-composition-id="hero-scene"] .proof-rail {
+        display: flex;
+        gap: 18px;
+        width: 100%;
+      }
+
+      [data-composition-id="hero-scene"] .proof-chip {
+        padding: 16px 18px;
+        border: 1px solid rgba(237, 243, 251, 0.12);
+        background: rgba(8, 17, 29, 0.52);
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    </style>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".eyebrow", { y: 18, opacity: 0, duration: 0.48, ease: "power3.out" }, 0.15);
+      tl.from(".hero-name span", { y: 72, opacity: 0, duration: 0.72, stagger: 0.1, ease: "expo.out" }, 0.24);
+      tl.from(".hero-summary", { y: 40, opacity: 0, duration: 0.52, ease: "power2.out" }, 0.42);
+      tl.from(".summary-card", { x: 70, opacity: 0, duration: 0.62, ease: "back.out(1.18)" }, 0.36);
+      tl.from(".proof-chip", { y: 26, opacity: 0, duration: 0.44, stagger: 0.08, ease: "power4.out" }, 0.66);
+      tl.from(".hero-orbit", { scale: 0.9, opacity: 0, duration: 0.9, stagger: 0.08, ease: "sine.out" }, 0.12);
+      tl.from(".signal-node", { scale: 0, opacity: 0, duration: 0.36, stagger: 0.1, ease: "back.out(1.7)" }, 0.48);
+      tl.to(".hero-orbit", { rotation: 12, transformOrigin: "center center", duration: 4.0, ease: "none" }, 0);
+      tl.to(".node-a", { x: 18, y: -12, duration: 2.2, repeat: 1, yoyo: true, ease: "sine.inOut" }, 0.4);
+      tl.to(".node-b", { x: -14, y: 16, duration: 2.4, repeat: 1, yoyo: true, ease: "sine.inOut" }, 0.35);
+      tl.to(".node-c", { x: 16, y: 10, duration: 2.1, repeat: 1, yoyo: true, ease: "sine.inOut" }, 0.28);
+      window.__timelines["hero-scene"] = tl;
+    </script>
+  </div>
+</template>

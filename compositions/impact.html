@@ -1,0 +1,212 @@
+<template id="impact-scene-template">
+  <div
+    data-composition-id="impact-scene"
+    data-start="0"
+    data-duration="4.6"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div class="scene-content impact-layout">
+      <div class="section-label">Measured impact</div>
+      <div class="impact-grid">
+        <div class="impact-lead">
+          <div class="impact-card lead-card">
+            <div class="card-kicker">Enterprise delivery</div>
+            <div class="lead-metric"><span class="counter" data-target="20">0</span>+</div>
+            <p class="lead-copy">AI POCs delivered across RAG, agents, MCP, and fine-tuning systems.</p>
+          </div>
+        </div>
+        <div class="impact-side">
+          <div class="metric-row">
+            <div class="metric-copy">
+              <div class="metric-value"><span class="counter" data-target="25">0</span>%</div>
+              <div class="metric-text">Developer productivity lift via production-ready MCP servers.</div>
+            </div>
+            <div class="metric-bar"><div class="metric-fill fill-a"></div></div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-copy">
+              <div class="metric-value"><span class="counter" data-target="10">0</span>%</div>
+              <div class="metric-text">Latency reduction on an enterprise AI digital experience platform.</div>
+            </div>
+            <div class="metric-bar"><div class="metric-fill fill-b"></div></div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-copy">
+              <div class="metric-value"><span class="counter" data-target="1000">0</span>+</div>
+              <div class="metric-text">Daily semantic search queries served with intelligent retrieval.</div>
+            </div>
+            <div class="metric-bar"><div class="metric-fill fill-c"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      [data-composition-id="impact-scene"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: #edf3fb;
+      }
+
+      [data-composition-id="impact-scene"] .scene-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 130px 140px 110px;
+        gap: 30px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="impact-scene"] .section-label,
+      [data-composition-id="impact-scene"] .card-kicker,
+      [data-composition-id="impact-scene"] .metric-text {
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      [data-composition-id="impact-scene"] .section-label {
+        font-size: 17px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #65e7ff;
+      }
+
+      [data-composition-id="impact-scene"] .impact-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 28px;
+        flex: 1;
+      }
+
+      [data-composition-id="impact-scene"] .impact-card,
+      [data-composition-id="impact-scene"] .metric-row {
+        border: 1px solid rgba(237, 243, 251, 0.1);
+        background: rgba(8, 17, 29, 0.58);
+      }
+
+      [data-composition-id="impact-scene"] .lead-card {
+        height: 100%;
+        padding: 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background:
+          linear-gradient(180deg, rgba(16, 34, 54, 0.76), rgba(8, 17, 29, 0.78)),
+          radial-gradient(circle at 80% 20%, rgba(212, 255, 63, 0.18), transparent 30%);
+      }
+
+      [data-composition-id="impact-scene"] .card-kicker {
+        font-size: 16px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(237, 243, 251, 0.72);
+      }
+
+      [data-composition-id="impact-scene"] .lead-metric {
+        font-size: 210px;
+        line-height: 0.88;
+        letter-spacing: -0.08em;
+        color: #d4ff3f;
+      }
+
+      [data-composition-id="impact-scene"] .lead-copy {
+        font-size: 32px;
+        line-height: 1.28;
+        max-width: 580px;
+      }
+
+      [data-composition-id="impact-scene"] .impact-side {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        justify-content: center;
+      }
+
+      [data-composition-id="impact-scene"] .metric-row {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        align-items: center;
+        padding: 24px 28px;
+      }
+
+      [data-composition-id="impact-scene"] .metric-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      [data-composition-id="impact-scene"] .metric-value {
+        font-size: 86px;
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+      }
+
+      [data-composition-id="impact-scene"] .metric-text {
+        font-size: 16px;
+        line-height: 1.45;
+        text-transform: uppercase;
+        color: rgba(237, 243, 251, 0.8);
+      }
+
+      [data-composition-id="impact-scene"] .metric-bar {
+        height: 16px;
+        border-radius: 999px;
+        background: rgba(237, 243, 251, 0.09);
+        overflow: hidden;
+      }
+
+      [data-composition-id="impact-scene"] .metric-fill {
+        height: 100%;
+        width: 0;
+        border-radius: inherit;
+      }
+
+      [data-composition-id="impact-scene"] .fill-a {
+        background: linear-gradient(90deg, #65e7ff, #d4ff3f);
+      }
+
+      [data-composition-id="impact-scene"] .fill-b {
+        background: linear-gradient(90deg, #d4ff3f, #65e7ff);
+      }
+
+      [data-composition-id="impact-scene"] .fill-c {
+        background: linear-gradient(90deg, #65e7ff, rgba(101, 231, 255, 0.45));
+      }
+    </style>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const counters = Array.from(document.querySelectorAll(".counter"));
+
+      tl.from(".section-label", { y: 18, opacity: 0, duration: 0.42, ease: "power3.out" }, 0.16);
+      tl.from(".lead-card", { y: 50, opacity: 0, duration: 0.62, ease: "power4.out" }, 0.24);
+      tl.from(".metric-row", { x: 70, opacity: 0, duration: 0.56, stagger: 0.1, ease: "expo.out" }, 0.34);
+
+      counters.forEach((counter, index) => {
+        const target = Number(counter.dataset.target || "0");
+        const state = { value: 0 };
+        tl.to(
+          state,
+          {
+            value: target,
+            duration: 1.1,
+            ease: "power2.out",
+            onUpdate: () => {
+              counter.textContent = target >= 1000 ? Math.round(state.value).toString() : Math.round(state.value).toString();
+            },
+          },
+          0.48 + index * 0.12,
+        );
+      });
+
+      tl.to(".fill-a", { width: "86%", duration: 0.9, ease: "power3.out" }, 0.52);
+      tl.to(".fill-b", { width: "72%", duration: 0.86, ease: "power3.out" }, 0.66);
+      tl.to(".fill-c", { width: "94%", duration: 0.96, ease: "power3.out" }, 0.8);
+      window.__timelines["impact-scene"] = tl;
+    </script>
+  </div>
+</template>

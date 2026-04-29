@@ -1,0 +1,209 @@
+<template id="experience-scene-template">
+  <div
+    data-composition-id="experience-scene"
+    data-start="0"
+    data-duration="4.8"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div class="scene-content experience-layout">
+      <div class="section-label">Experience timeline</div>
+      <div class="timeline-grid">
+        <div class="timeline-rail">
+          <div class="timeline-line"></div>
+          <div class="timeline-year year-a">2024</div>
+          <div class="timeline-year year-b">2025</div>
+          <div class="timeline-year year-c">Now</div>
+        </div>
+        <div class="timeline-cards">
+          <article class="role-card role-current">
+            <div class="role-topline">Jul 2025 - Present</div>
+            <h2>Associate AI Engineer</h2>
+            <div class="role-company">The Modern Data Company / Remote</div>
+            <p>Built production-ready MCP servers and agentic applications for DataOS, improving developer productivity by 25%.</p>
+          </article>
+          <article class="role-card role-previous">
+            <div class="role-topline">Dec 2024 - Jun 2025</div>
+            <h2>Gen AI / ML Engineer</h2>
+            <div class="role-company">QED42 / Pune</div>
+            <p>Delivered 20+ AI POCs, enterprise semantic search, and end-to-end LLM observability for production workloads.</p>
+          </article>
+        </div>
+        <div class="experience-right">
+          <div class="focus-panel">
+            <div class="focus-kicker">System themes</div>
+            <ul>
+              <li>Autonomous AI agents</li>
+              <li>RAG and semantic retrieval</li>
+              <li>MCP integrations and tooling</li>
+              <li>Observability with SigNoz and Langfuse</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      [data-composition-id="experience-scene"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: #edf3fb;
+      }
+
+      [data-composition-id="experience-scene"] .scene-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 130px 140px 110px;
+        gap: 28px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="experience-scene"] .section-label,
+      [data-composition-id="experience-scene"] .role-topline,
+      [data-composition-id="experience-scene"] .role-company,
+      [data-composition-id="experience-scene"] .focus-kicker,
+      [data-composition-id="experience-scene"] .timeline-year {
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      [data-composition-id="experience-scene"] .section-label {
+        font-size: 17px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #65e7ff;
+      }
+
+      [data-composition-id="experience-scene"] .timeline-grid {
+        display: grid;
+        grid-template-columns: 180px 1.05fr 0.9fr;
+        gap: 28px;
+        flex: 1;
+      }
+
+      [data-composition-id="experience-scene"] .timeline-rail {
+        position: relative;
+      }
+
+      [data-composition-id="experience-scene"] .timeline-line {
+        position: absolute;
+        top: 26px;
+        bottom: 20px;
+        left: 54px;
+        width: 2px;
+        background: linear-gradient(180deg, rgba(101, 231, 255, 0.15), rgba(212, 255, 63, 0.95));
+        transform-origin: top center;
+      }
+
+      [data-composition-id="experience-scene"] .timeline-year {
+        position: absolute;
+        left: 0;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(237, 243, 251, 0.7);
+      }
+
+      [data-composition-id="experience-scene"] .year-a {
+        top: 0;
+      }
+
+      [data-composition-id="experience-scene"] .year-b {
+        top: 240px;
+      }
+
+      [data-composition-id="experience-scene"] .year-c {
+        bottom: 18px;
+      }
+
+      [data-composition-id="experience-scene"] .timeline-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      [data-composition-id="experience-scene"] .role-card,
+      [data-composition-id="experience-scene"] .focus-panel {
+        border: 1px solid rgba(237, 243, 251, 0.1);
+        background: rgba(8, 17, 29, 0.56);
+      }
+
+      [data-composition-id="experience-scene"] .role-card {
+        padding: 28px 30px;
+      }
+
+      [data-composition-id="experience-scene"] .role-current {
+        background:
+          linear-gradient(180deg, rgba(16, 34, 54, 0.82), rgba(8, 17, 29, 0.74)),
+          radial-gradient(circle at 80% 0%, rgba(101, 231, 255, 0.18), transparent 34%);
+      }
+
+      [data-composition-id="experience-scene"] .role-topline,
+      [data-composition-id="experience-scene"] .role-company {
+        font-size: 16px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(237, 243, 251, 0.72);
+      }
+
+      [data-composition-id="experience-scene"] h2 {
+        margin: 10px 0 8px;
+        font-size: 56px;
+        line-height: 0.98;
+        letter-spacing: -0.05em;
+      }
+
+      [data-composition-id="experience-scene"] p {
+        margin-top: 18px;
+        font-size: 24px;
+        line-height: 1.34;
+        max-width: 720px;
+      }
+
+      [data-composition-id="experience-scene"] .experience-right {
+        display: flex;
+        align-items: stretch;
+      }
+
+      [data-composition-id="experience-scene"] .focus-panel {
+        width: 100%;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background: linear-gradient(180deg, rgba(16, 34, 54, 0.72), rgba(8, 17, 29, 0.8));
+      }
+
+      [data-composition-id="experience-scene"] .focus-kicker {
+        font-size: 15px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #d4ff3f;
+      }
+
+      [data-composition-id="experience-scene"] ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 22px;
+        font-size: 24px;
+        line-height: 1.3;
+      }
+    </style>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".section-label", { y: 18, opacity: 0, duration: 0.42, ease: "power3.out" }, 0.16);
+      tl.from(".timeline-line", { scaleY: 0, duration: 0.7, ease: "power3.out" }, 0.28);
+      tl.from(".timeline-year", { x: -24, opacity: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }, 0.34);
+      tl.from(".role-current", { x: 44, opacity: 0, duration: 0.56, ease: "expo.out" }, 0.42);
+      tl.from(".role-previous", { x: 44, opacity: 0, duration: 0.56, ease: "power4.out" }, 0.62);
+      tl.from(".focus-panel", { x: 70, opacity: 0, duration: 0.6, ease: "back.out(1.18)" }, 0.56);
+      tl.from(".focus-panel li", { y: 18, opacity: 0, duration: 0.36, stagger: 0.08, ease: "power2.out" }, 0.84);
+      window.__timelines["experience-scene"] = tl;
+    </script>
+  </div>
+</template>

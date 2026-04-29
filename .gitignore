@@ -1,0 +1,4 @@
+.thumbnails/
+renders/
+.DS_Store
+node_modules/

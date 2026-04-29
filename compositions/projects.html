@@ -1,0 +1,186 @@
+<template id="projects-scene-template">
+  <div
+    data-composition-id="projects-scene"
+    data-start="0"
+    data-duration="5.2"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div class="trace trace-a"></div>
+    <div class="trace trace-b"></div>
+    <div class="scene-content projects-layout">
+      <div class="section-label">Flagship builds</div>
+      <div class="projects-grid">
+        <article class="project-panel featured-project">
+          <div class="project-tag">Voice intelligence platform</div>
+          <h2>Call analytics, transcription, vector search, and Gemini-powered RAG over archived conversations.</h2>
+          <div class="chip-row">
+            <span>FastAPI</span>
+            <span>Faster-Whisper</span>
+            <span>LanceDB</span>
+            <span>SQLite FTS5</span>
+            <span>Gemini RAG</span>
+          </div>
+          <p>
+            Built contact-wise drill-down, browser playback, multilingual transcription fallbacks, and semantically grounded Q&A by contact and date range.
+          </p>
+        </article>
+        <article class="project-panel secondary-project">
+          <div class="project-tag accent">Award-winning ML system</div>
+          <h3>AI Water Well Prediction System</h3>
+          <div class="project-stat">500K+ data points / 87% accuracy / SIH 2023 winner</div>
+          <p>
+            Led a six-member team to deliver an ensemble ML solution for the Jal Shakti Ministry using KNN, K-Means, and Random Forest.
+          </p>
+        </article>
+      </div>
+    </div>
+    <style>
+      [data-composition-id="projects-scene"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: #edf3fb;
+        background:
+          radial-gradient(circle at 12% 18%, rgba(101, 231, 255, 0.1), transparent 24%),
+          radial-gradient(circle at 82% 72%, rgba(212, 255, 63, 0.08), transparent 22%);
+      }
+
+      [data-composition-id="projects-scene"] .scene-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 130px 140px 110px;
+        gap: 30px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="projects-scene"] .section-label,
+      [data-composition-id="projects-scene"] .project-tag,
+      [data-composition-id="projects-scene"] .project-stat,
+      [data-composition-id="projects-scene"] .chip-row span {
+        font-family: "IBM Plex Mono", monospace;
+      }
+
+      [data-composition-id="projects-scene"] .section-label {
+        font-size: 17px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #bff7ff;
+      }
+
+      [data-composition-id="projects-scene"] .projects-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        flex: 1;
+      }
+
+      [data-composition-id="projects-scene"] .project-panel {
+        position: relative;
+        border: 1px solid rgba(237, 243, 251, 0.1);
+        background: rgba(8, 17, 29, 0.9);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      [data-composition-id="projects-scene"] .featured-project {
+        background:
+          linear-gradient(180deg, rgba(16, 34, 54, 0.95), rgba(8, 17, 29, 0.94)),
+          radial-gradient(circle at 78% 20%, rgba(101, 231, 255, 0.12), transparent 30%);
+      }
+
+      [data-composition-id="projects-scene"] .secondary-project {
+        justify-content: center;
+      }
+
+      [data-composition-id="projects-scene"] .project-tag {
+        width: fit-content;
+        font-size: 15px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(244, 248, 255, 0.88);
+      }
+
+      [data-composition-id="projects-scene"] .project-tag.accent {
+        color: #eaff8d;
+      }
+
+      [data-composition-id="projects-scene"] h2 {
+        font-size: 60px;
+        line-height: 1.02;
+        letter-spacing: -0.05em;
+        max-width: 850px;
+      }
+
+      [data-composition-id="projects-scene"] h3 {
+        font-size: 54px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+
+      [data-composition-id="projects-scene"] p {
+        font-size: 24px;
+        line-height: 1.34;
+        color: rgba(237, 243, 251, 0.88);
+      }
+
+      [data-composition-id="projects-scene"] .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      [data-composition-id="projects-scene"] .chip-row span {
+        padding: 10px 14px;
+        border: 1px solid rgba(101, 231, 255, 0.18);
+        background: rgba(6, 16, 27, 0.9);
+        color: #ffffff;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      [data-composition-id="projects-scene"] .project-stat {
+        font-size: 18px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(244, 248, 255, 0.84);
+      }
+
+      [data-composition-id="projects-scene"] .trace {
+        position: absolute;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(101, 231, 255, 0), rgba(101, 231, 255, 0.92), rgba(212, 255, 63, 0));
+        transform-origin: left center;
+      }
+
+      [data-composition-id="projects-scene"] .trace-a {
+        top: 304px;
+        left: 120px;
+        width: 620px;
+      }
+
+      [data-composition-id="projects-scene"] .trace-b {
+        top: 676px;
+        left: 840px;
+        width: 620px;
+      }
+    </style>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.from(".section-label", { y: 18, opacity: 0, duration: 0.42, ease: "power3.out" }, 0.16);
+      tl.from(".trace", { scaleX: 0, opacity: 0, duration: 0.72, stagger: 0.12, ease: "power2.out" }, 0.26);
+      tl.from(".featured-project", { y: 54, opacity: 0, duration: 0.64, ease: "expo.out" }, 0.36);
+      tl.from(".secondary-project", { x: 64, opacity: 0, duration: 0.6, ease: "back.out(1.18)" }, 0.52);
+      tl.from(".chip-row span", { y: 16, opacity: 0, duration: 0.34, stagger: 0.06, ease: "power2.out" }, 0.74);
+      window.__timelines["projects-scene"] = tl;
+    </script>
+  </div>
+</template>
